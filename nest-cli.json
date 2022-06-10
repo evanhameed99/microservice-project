@@ -1,0 +1,57 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api-gateway/src",
+  "monorepo": true,
+  "root": "apps/api-gateway",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+  },
+  "projects": {
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "notification-service": {
+      "type": "application",
+      "root": "apps/notification-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/notification-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/notification-service/tsconfig.app.json"
+      }
+    },
+    "users-service": {
+      "type": "application",
+      "root": "apps/users-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/users-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users-service/tsconfig.app.json"
+      }
+    },
+    "auth-service": {
+      "type": "application",
+      "root": "apps/auth-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth-service/tsconfig.app.json"
+      }
+    },
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    }
+  }
+}
